@@ -5,9 +5,9 @@
     "author": "Emily Rodriguez",
     "likes": 120,
     "comments": [
-      "Awesome tips!",
-      "Could you cover responsive fonts for mobile devices?",
-      "Thanks for the detailed guide."
+      { "id": 1, "author": "John Doe", "text": "Awesome tips!" },
+      { "id": 2, "author": "Jane Smith", "text": "Could you cover responsive fonts for mobile devices?" },
+      { "id": 3, "author": "Bob Johnson", "text": "Thanks for the detailed guide." }
     ],
     "content": "In this post, we delve into the art of creating responsive typography using CSS. Learn how to ensure your text looks great on screens of all sizes.",
     "publishedAt": "2023-01-15T08:30:00Z"
@@ -18,9 +18,9 @@
     "author": "Daniel Carter",
     "likes": 180,
     "comments": [
-      "This is a must-read for JavaScript developers!",
-      "ES6 arrow functions are my favorite.",
-      "Can you provide more examples of destructuring?"
+      { "id": 1, "author": "Alice Brown", "text": "This is a must-read for JavaScript developers!" },
+      { "id": 2, "author": "Charlie Davis", "text": "ES6 arrow functions are my favorite." },
+      { "id": 3, "author": "Eva Green", "text": "Can you provide more examples of destructuring?" }
     ],
     "content": "Discover the powerful features introduced in modern JavaScript, including arrow functions, destructuring, and more. Supercharge your coding skills!",
     "publishedAt": "2023-02-10T12:45:00Z"
@@ -31,9 +31,9 @@
     "author": "Sophia Martinez",
     "likes": 220,
     "comments": [
-      "Great explanation!",
-      "How can I integrate Redux with my existing React project?",
-      "Looking forward to more React content!"
+      { "id": 1, "author": "Grace Wilson", "text": "Great explanation!" },
+      { "id": 2, "author": "Henry Turner", "text": "How can I integrate Redux with my existing React project?" },
+      { "id": 3, "author": "Ivy Robinson", "text": "Looking forward to more React content!" }
     ],
     "content": "Learn how to build dynamic and stateful user interfaces using React and Redux. This tutorial covers the basics and advanced techniques for managing state in your applications.",
     "publishedAt": "2023-03-20T15:20:00Z"
@@ -44,9 +44,9 @@
     "author": "Liam Turner",
     "likes": 150,
     "comments": [
-      "Interesting topic!",
-      "I prefer styled-components for styling.",
-      "Could you compare different CSS-in-JS libraries?"
+      { "id": 1, "author": "Olivia White", "text": "Interesting topic!" },
+      { "id": 2, "author": "Perry Black", "text": "I prefer styled-components for styling." },
+      { "id": 3, "author": "Quinn Brown", "text": "Could you compare different CSS-in-JS libraries?" }
     ],
     "content": "Explore the world of CSS-in-JS solutions and understand the advantages and drawbacks of this approach. Find the best fit for your project!",
     "publishedAt": "2023-04-05T09:10:00Z"
@@ -57,9 +57,9 @@
     "author": "Ava Clark",
     "likes": 250,
     "comments": [
-      "Crucial information!",
-      "What tools do you recommend for image optimization?",
-      "Thanks for sharing your expertise."
+      { "id": 1, "author": "Liam Turner", "text": "Crucial information!" },
+      { "id": 2, "author": "Mia Davis", "text": "What tools do you recommend for image optimization?" },
+      { "id": 3, "author": "Noah Miller", "text": "Thanks for sharing your expertise." }
     ],
     "content": "Improve your website performance by mastering image optimization. This guide covers techniques, tools, and best practices for delivering high-quality images with minimal impact on load times.",
     "publishedAt": "2023-05-18T14:00:00Z"
@@ -70,9 +70,9 @@
     "author": "Caleb Foster",
     "likes": 180,
     "comments": [
-      "Amazing animations!",
-      "Can you demonstrate creating a simple loading spinner?",
-      "Looking forward to your next animation tutorial."
+      { "id": 1, "author": "Nina Taylor", "text": "Amazing animations!" },
+      { "id": 2, "author": "Oliver White", "text": "Can you demonstrate creating a simple loading spinner?" },
+      { "id": 3, "author": "Penelope Turner", "text": "Looking forward to your next animation tutorial." }
     ],
     "content": "Dive into the world of CSS animations! This tutorial walks you through using transitions and keyframes to create smooth and engaging animations for your web interfaces.",
     "publishedAt": "2023-06-30T18:50:00Z"
@@ -83,9 +83,9 @@
     "author": "Olivia Wright",
     "likes": 200,
     "comments": [
-      "Critical information!",
-      "How can I handle errors in asynchronous code?",
-      "Thanks for the clear explanations."
+      { "id": 1, "author": "Quincy Miller", "text": "Critical information!" },
+      { "id": 2, "author": "Rachel Brown", "text": "How can I handle errors in asynchronous code?" },
+      { "id": 3, "author": "Samuel Davis", "text": "Thanks for the clear explanations." }
     ],
     "content": "Master the art of error handling in JavaScript applications. Learn techniques to catch and handle errors gracefully, ensuring a smoother user experience.",
     "publishedAt": "2023-07-12T10:15:00Z"
@@ -96,9 +96,9 @@
     "author": "Maximilian Harper",
     "likes": 160,
     "comments": [
-      "Helpful comparison!",
-      "Which one do you personally prefer?",
-      "Great job on breaking down the differences."
+      { "id": 1, "author": "Tara Robinson", "text": "Helpful comparison!" },
+      { "id": 2, "author": "Ulysses White", "text": "Which one do you personally prefer?" },
+      { "id": 3, "author": "Violet Turner", "text": "Great job on breaking down the differences." }
     ],
     "content": "Compare Sass and Less, two popular CSS preprocessors. Explore their features, syntax, and advantages to determine which one is the better fit for your projects.",
     "publishedAt": "2023-08-25T11:30:00Z"
@@ -109,9 +109,9 @@
     "author": "Elena Rodriguez",
     "likes": 220,
     "comments": [
-      "Very important topic!",
-      "How can I make my forms more accessible?",
-      "Thanks for advocating for inclusive design."
+      { "id": 1, "author": "Wesley Black", "text": "Very important topic!" },
+      { "id": 2, "author": "Xena White", "text": "How can I make my forms more accessible?" },
+      { "id": 3, "author": "Yasmine Turner", "text": "Thanks for advocating for inclusive design." }
     ],
     "content": "Understand the principles of web accessibility and discover best practices for designing websites that are inclusive and usable by all users, including those with disabilities.",
     "publishedAt": "2023-09-08T16:40:00Z"
@@ -122,9 +122,9 @@
     "author": "Isaac Sullivan",
     "likes": 140,
     "comments": [
-      "Love Vue.js!",
-      "What are some Vue.js projects I can try as a beginner?",
-      "Clear and concise introduction."
+      { "id": 1, "author": "Zara Robinson", "text": "Love Vue.js!" },
+      { "id": 2, "author": "Adam Davis", "text": "What are some Vue.js projects I can try as a beginner?" },
+      { "id": 3, "author": "Bella White", "text": "Clear and concise introduction." }
     ],
     "content": "Embark on your Vue.js journey! This beginner-friendly guide covers the basics of Vue.js and provides hands-on examples to kickstart your Vue.js development.",
     "publishedAt": "2023-10-19T13:05:00Z"
@@ -135,9 +135,9 @@
     "author": "Natalie White",
     "likes": 190,
     "comments": [
-      "Vital information!",
-      "Any advice for dealing with Internet Explorer?",
-      "Thanks for the cross-browser testing tools recommendation."
+      { "id": 1, "author": "Chris Turner", "text": "Vital information!" },
+      { "id": 2, "author": "Diana Robinson", "text": "Any advice for dealing with Internet Explorer?" },
+      { "id": 3, "author": "Ethan Davis", "text": "Thanks for the cross-browser testing tools recommendation." }
     ],
     "content": "Ensure your web applications work seamlessly across different browsers. Learn essential tips, tools, and techniques for achieving cross-browser compatibility.",
     "publishedAt": "2023-11-02T17:25:00Z"
@@ -148,37 +148,11 @@
     "author": "Benjamin Turner",
     "likes": 210,
     "comments": [
-      "Fascinating technology!",
-      "How does GraphQL compare to REST APIs?",
-      "Can you demonstrate a simple GraphQL query?"
+      { "id": 1, "author": "Fiona Robinson", "text": "Fascinating technology!" },
+      { "id": 2, "author": "George White", "text": "How does GraphQL compare to REST APIs?" },
+      { "id": 3, "author": "Hannah Turner", "text": "Can you demonstrate a simple GraphQL query?" }
     ],
     "content": "Explore GraphQL, a modern API technology that provides a more efficient and flexible approach to fetching data. This guide covers the basics and advanced features of GraphQL.",
     "publishedAt": "2023-12-15T14:55:00Z"
-  },
-  {
-    "id": 13,
-    "title": "Webpack 5: An In-Depth Guide",
-    "author": "Sophie Lewis",
-    "likes": 160,
-    "comments": [
-      "Webpack can be tricky!",
-      "How can I optimize my webpack build for production?",
-      "Thanks for the detailed explanations and examples."
-    ],
-    "content": "Delve into Webpack 5 and learn how to configure this powerful bundler to optimize your front-end projects. From loaders to plugins, this guide covers it all.",
-    "publishedAt": "2023-01-28T09:45:00Z"
-  },
-  {
-    "id": 14,
-    "title": "Securing Your Front-End Applications: Best Practices",
-    "author": "Nicholas Parker",
-    "likes": 200,
-    "comments": [
-      "Security is crucial!",
-      "How can I prevent common front-end security vulnerabilities?",
-      "Thanks for raising awareness about web security."
-    ],
-    "content": "Protect your front-end applications from common security threats. This guide provides best practices, tips, and tools to enhance the security of your web projects.",
-    "publishedAt": "2023-02-08T11:10:00Z"
   }
 ]

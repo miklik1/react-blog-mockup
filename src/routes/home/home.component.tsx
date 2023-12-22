@@ -1,8 +1,6 @@
-const Home = () => {
+function Home() {
   return (
-    <>
     <div>Home Screen</div>
-    </>
   )
 }
 

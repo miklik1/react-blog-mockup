@@ -1,9 +1,16 @@
-export default interface BlogPost {
+interface Comment {
+  id: number;
+  author: string;
+  text: string;
+}
+interface BlogPost {
   id: number;
   title: string;
   author: string;
   likes: number;
-  comments: string[];
+  comments: Comment[];
   content: string;
-  publishedAt: Date;
+  publishedAt: string;
 }
+
+export type { Comment, BlogPost };
