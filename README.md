@@ -1,4 +1,3 @@
-```markdown
 # Vite + TypeScript + SWC Project
 
 This project is bootstrapped with Vite, using TypeScript for static typing and SWC as the JavaScript/TypeScript compiler.
@@ -66,4 +65,3 @@ npm run build-storybook
 ```
 
 Builds the Storybook static files.
-```
