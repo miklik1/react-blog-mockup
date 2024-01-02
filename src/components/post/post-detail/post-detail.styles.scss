@@ -1,0 +1,21 @@
+.post-detail-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+}
+
+.post-detail-component {
+  max-width: 1200px;
+  text-align: left;
+  padding: 1em;
+}
+
+h2 {
+  margin-top: 1em;
+}
+
+.likes {
+  text-align: right;
+}

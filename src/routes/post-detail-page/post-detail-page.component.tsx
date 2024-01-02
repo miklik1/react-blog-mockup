@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 
 import { MyContext } from "../../store/store";
 
-import Comments from "../../components/comments/comments.component";
+import Comments from "../../components/comments/comment-list/comments.component";
 import BlogPostDisplay from "../../components/post/post-detail/post-detail.component";
 
-import type { BlogPost, Comment } from "../../types/BlogPost";
 import { findPostById } from "../../utils/utils";
+import type { TBlogPost, TComment } from "../../types/BlogPost";
 
 const PostDetailPage: React.FC = () => {
   // Získání parametru z URL
@@ -22,14 +22,14 @@ const PostDetailPage: React.FC = () => {
   const post = useMemo(() => {
     // Pokud jsou k dispozici id příspěvku a stavový kontext, hledej příspěvek
     if (postId !== undefined && postsContext !== undefined) {
-      return findPostById(postsContext.posts, postIdNumber) as BlogPost;
+      return findPostById(postsContext.posts, postIdNumber) as TBlogPost;
     }
     // V případě nedostatečných dat vrať null
     return null;
   }, [postId, postsContext, postIdNumber]);
 
   // Funkce pro aktualizaci komentářů
-  const updateComments = (postId: number, newComments: Comment[]) => {
+  const updateComments = (postId: number, newComments: TComment[]) => {
     // Kontrola existence potřebných dat
     if (!postId || !postsContext) {
       return;
@@ -40,10 +40,9 @@ const PostDetailPage: React.FC = () => {
 
   // Kontrola existence příspěvku a stavového kontextu
   if (!post || !postsContext) {
-    return <div>Neplatné ID příspěvku</div>;
+    return <div>Non valid ID</div>;
   }
 
-  // Renderování komponenty s detaily příspěvku a komentáři
   return (
     <>
       {post && <BlogPostDisplay post={post} />}

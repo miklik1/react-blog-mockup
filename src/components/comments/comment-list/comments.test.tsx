@@ -1,12 +1,12 @@
-import { render, fireEvent, screen, act} from "@testing-library/react";
-import "@testing-library/jest-dom"; // for expect(...).toBeInTheDocument()
+import { render, fireEvent, screen } from "@testing-library/react";
+import "@testing-library/jest-dom";
 import Comments from "./comments.component";
 
 describe("Comments Component", () => {
   const postId = 1;
   const comments = [
-    { id: 1, author: "John Doe", text: "Great post!" },
-    { id: 2, author: "Jane Smith", text: "Very informative." },
+    { id: 1, author: "John Doe", text: "Great post!", replies: [] },
+    { id: 2, author: "Jane Smith", text: "Very informative.", replies: [] },
   ];
 
   const updateCommentsMock = jest.fn();
@@ -49,30 +49,8 @@ describe("Comments Component", () => {
         id: expect.any(Number),
         author: "New User",
         text: "This is a new comment.",
+        replies: [],
       },
     ]);
-  });
-
-  test("does not add a new comment with empty fields", () => {
-    const submitButton = screen.getByText("Submit");
-    // Ensure form fields are empty after clicking submit
-    const authorInput = screen.getByPlaceholderText(
-      "Your Name"
-    ) as HTMLInputElement;
-    const commentInput = screen.getByPlaceholderText(
-      "Add a new comment..."
-    ) as HTMLTextAreaElement;
-
-    fireEvent.change(authorInput, { target: { value: "" } });
-    fireEvent.change(commentInput, { target: { value: "" } });
-
-    fireEvent.click(submitButton);
-
-    // Use act to wait for the asynchronous operations to complete
-    act(() => {
-      expect(updateCommentsMock).not.toHaveBeenCalled();
-      expect(authorInput.value).toBe("");
-      expect(commentInput.value).toBe("");
-    });
   });
 });

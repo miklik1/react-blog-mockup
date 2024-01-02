@@ -1,0 +1,24 @@
+.upper-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5em;
+}
+
+input,
+textarea {
+  border-radius: 0.5em;
+  padding: 0.5em;
+}
+
+textarea {
+  width: 100%;
+}
+
+.reply-info {
+  color: white;
+}
+
+.warning {
+  color: red;
+}

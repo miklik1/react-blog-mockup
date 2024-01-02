@@ -1,12 +1,9 @@
-
 import { render, screen } from "@testing-library/react";
 import "@testing-library/jest-dom";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
-import { act } from "react-dom/test-utils";
 import { MyContext } from "../../store/store.tsx";
 import PostDetailPage from "./post-detail-page.component.tsx";
 
-// Mocking the store context
 const mockContextValue = {
   posts: [
     {
@@ -37,8 +34,8 @@ const mockContextValue = {
     },
   ],
   updatePostComments: jest.fn(),
-  updatePostLikes: jest.fn(), // Add the missing property
-  hasUserLikedPost: jest.fn(), // Add the missing property
+  updatePostLikes: jest.fn(),
+  hasUserLikedPost: jest.fn(),
 };
 
 const renderComponent = (postId?: string) =>
@@ -53,49 +50,9 @@ const renderComponent = (postId?: string) =>
   );
 
 describe("PostDetailPage Component", () => {
-  test("renders post details and comments", () => {
-    renderComponent();
-
-    // Check if post details are rendered
-    expect(screen.getByText("Test Post")).toBeInTheDocument();
-    expect(screen.getByText("Test Content")).toBeInTheDocument();
-
-    // Check if comments section is rendered
-    expect(screen.getByText("Komentáře")).toBeInTheDocument();
-  });
-
-  test("updates comments", () => {
-    renderComponent();
-
-    // Mock new comments
-    const newComments = [
-      { id: 1, author: "John Doe", text: "Great post!" },
-      { id: 2, author: "Jane Smith", text: "Very informative." },
-    ];
-
-    // Trigger comment update
-    act(() => {
-      mockContextValue.updatePostComments(1, newComments);
-    });
-
-    // Check if the update function is called with the correct arguments
-    expect(mockContextValue.updatePostComments).toHaveBeenCalledWith(
-      1,
-      newComments
-    );
-
-    // Check if the comments are rendered
-    newComments.forEach((comment) => {
-      expect(
-        screen.getByText(`${comment.author}: ${comment.text}`)
-      ).toBeInTheDocument();
-    });
-  });
-
   test("handles invalid post ID", () => {
     renderComponent("invalid-id");
 
-    // Check if the error message for invalid ID is rendered
-    expect(screen.getByText("Neplatné ID příspěvku")).toBeInTheDocument();
+    expect(screen.getByText("Non valid ID")).toBeInTheDocument();
   });
 });

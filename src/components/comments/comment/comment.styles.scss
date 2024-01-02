@@ -1,0 +1,16 @@
+.comment {
+  margin: 0.5em;
+  padding: 0.5em 1em;
+  background-color: whitesmoke;
+  border-radius: 0.5em;
+
+  .comment-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  p {
+    word-break: break-all;
+  }
+}

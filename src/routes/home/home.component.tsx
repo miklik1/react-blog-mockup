@@ -1,7 +1,3 @@
-function Home() {
-  return (
-    <div>Home Screen</div>
-  )
-}
+const Home = () => <div>Home Screen</div>;
 
 export default Home;

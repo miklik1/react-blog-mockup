@@ -2,10 +2,11 @@ export default {
   preset: "ts-jest",
   testEnvironment: "jest-environment-jsdom",
   transform: {
-    "^.+\\.tsx?$": "ts-jest",
-    // process `*.tsx` files with `ts-jest`
+    "^.+\\.(js|jsx|ts|tsx)$": "ts-jest",
   },
+  testRegex: "(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$",
+  moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
   moduleNameMapper: {
-    "\\.(gif|ttf|eot|svg|png)$": "<rootDir>/test/__ mocks __/fileMock.js",
+    "\\.(css|less|scss)$": "identity-obj-proxy",
   },
 };

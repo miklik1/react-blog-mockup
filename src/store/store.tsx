@@ -1,12 +1,13 @@
 import React, { createContext, ReactNode, useState, useEffect } from "react";
+
 import posts from "./data.json";
-import type { BlogPost, Comment } from "../types/BlogPost";
+import type { TBlogPost, TComment } from "../types/BlogPost";
 
 // Definice typu pro kontext
 interface MyContextType {
-  posts: BlogPost[];
+  posts: TBlogPost[];
   updatePostLikes: (postId: number) => void;
-  updatePostComments: (postId: number, newComments: Comment[]) => void;
+  updatePostComments: (postId: number, newComments: TComment[]) => void;
   hasUserLikedPost: (postId: number) => boolean;
 }
 
@@ -20,7 +21,7 @@ interface MyContextProviderProps {
 
 const MyContextProvider: React.FC<MyContextProviderProps> = ({ children }) => {
   // Načtení příspěvků ze stavu nebo z localStorage
-  const [postsData, setPostsData] = useState<BlogPost[]>(() => {
+  const [postsData, setPostsData] = useState<TBlogPost[]>(() => {
     const storedPosts = localStorage.getItem("posts");
     return storedPosts ? JSON.parse(storedPosts) : posts;
   });
@@ -47,11 +48,11 @@ const MyContextProvider: React.FC<MyContextProviderProps> = ({ children }) => {
     );
 
     const likedPosts = localStorage.getItem("likedPosts") || "";
-    localStorage.setItem("likedPosts", `${likedPosts + postId  },`);
+    localStorage.setItem("likedPosts", `${likedPosts + postId},`);
   };
 
   // Funkce pro aktualizaci komentářů u příspěvku
-  const updatePostComments = (postId: number, newComments: Comment[]) => {
+  const updatePostComments = (postId: number, newComments: TComment[]) => {
     setPostsData((prevPosts) =>
       prevPosts.map((post) =>
         post.id === postId ? { ...post, comments: newComments } : post

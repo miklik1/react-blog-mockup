@@ -1,0 +1,47 @@
+.styled-button {
+  border-radius: 0.5em;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  transition: opacity 0.3s;
+
+  &.primary {
+    background-color: #3498db;
+    color: #fff;
+  }
+
+  &.secondary {
+    background-color: #22d783;
+    color: #fff;
+  }
+
+  &.danger {
+    background-color: #d6197a;
+    color: #fff;
+  }
+
+  &.submit {
+    background-color: #2ecc71;
+    color: #fff;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &.styled-button--small {
+    font-size: 12px;
+    padding: 10px 16px;
+  }
+
+  &.styled-button--medium {
+    font-size: 14px;
+    padding: 11px 20px;
+  }
+  
+  &.styled-button--large {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}

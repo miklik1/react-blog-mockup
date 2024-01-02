@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 
-
 import { Pagination } from "react-bootstrap";
 
 import PostCard from "../post-card/post-card.component";
 
-import type { BlogPost } from "../../../types/BlogPost";
+import type { TBlogPost } from "../../../types/BlogPost";
+import "./post-list.styles.scss";
 
 interface PostListProps {
-  posts: BlogPost[];
+  posts: TBlogPost[];
   postsPerPage: number;
 }
 
@@ -27,16 +27,14 @@ const PostList: React.FC<PostListProps> = ({ posts, postsPerPage }) => {
   const paginate = (pageNumber: number) => setCurrentPage(pageNumber);
 
   return (
-    // Zobrazení seznamu příspěvků a navigace stránkami
-    <div>
-      {/* Mapování příspěvků na komponentu PostCard */}
-      {currentPosts.map((post) => (
-        <PostCard key={post.id} post={post} />
-      ))}
+    <div className="post-list-container">
+      <div className="post-list-cards-container">
+        {currentPosts.map((post) => (
+          <PostCard key={post.id} post={post} />
+        ))}
+      </div>
 
-      {/* Komponenta pro navigaci stránkami */}
       <Pagination>
-        {/* Mapování čísel stránek a vytváření tlačítek pro přechod na danou stránku */}
         {Array.from({ length: Math.ceil(posts.length / postsPerPage) }).map(
           (_, index) => (
             <Pagination.Item

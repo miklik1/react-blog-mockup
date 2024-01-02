@@ -7,12 +7,11 @@ module.exports = {
     "plugin:react-hooks/recommended",
     "plugin:react/recommended",
     "plugin:jest/recommended",
-    "airbnb",
-    "prettier",
+    "plugin:storybook/recommended",
   ],
   ignorePatterns: ["dist", ".eslintrc.cjs"],
   parser: "@typescript-eslint/parser",
-  plugins: ["react-refresh", "jest"],
+  plugins: ["react-refresh", "jest", "import"],
   rules: {
     "react-refresh/only-export-components": [
       "warn",
@@ -27,6 +26,8 @@ module.exports = {
           "**/*{.,_}{test,spec}.{ts,tsx}", // tests where the extension or filename suffix denotes that it is a test
           "**/jest.config.ts", // jest config
           "**/jest.setup.ts", // jest setup
+          "**/*.stories.*",
+          "**/.storybook/**/*.*",
         ],
         optionalDependencies: false,
       },
@@ -37,6 +38,13 @@ module.exports = {
     ],
     "react/react-in-jsx-scope": "off",
     "react/jsx-uses-react": "off",
+    "react/function-component-definition": [
+      2,
+      {
+        namedComponents: "arrow-function",
+        unnamedComponents: "arrow-function",
+      },
+    ],
   },
   settings: {
     "import/resolver": {

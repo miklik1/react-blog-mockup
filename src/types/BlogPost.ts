@@ -1,16 +1,18 @@
-interface Comment {
+interface TComment {
   id: number;
   author: string;
   text: string;
+  replies?: TComment[];
 }
-interface BlogPost {
+
+interface TBlogPost {
   id: number;
   title: string;
   author: string;
   likes: number;
-  comments: Comment[];
+  comments: TComment[];
   content: string;
   publishedAt: string;
 }
 
-export type { Comment, BlogPost };
+export type { TComment, TBlogPost };

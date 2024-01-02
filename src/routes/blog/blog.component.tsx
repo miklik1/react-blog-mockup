@@ -11,7 +11,7 @@ const Blog: React.FC = () => {
   // Získání příspěvků ze stavového kontextu
   const posts = useContext(MyContext);
   // Počet příspěvků na jedné stránce
-  const postsPerPage = 2;
+  const postsPerPage = 9;
 
   // Zobrazení chybové zprávy v případě, že příspěvky nejsou načteny
   if (posts === undefined) {
@@ -20,12 +20,12 @@ const Blog: React.FC = () => {
 
   return (
     <Routes>
-        <Route
-          index
-          element={<PostList posts={posts.posts} postsPerPage={postsPerPage} />}
-        />
-        <Route path=":postId" element={<PostDetailPage />} />
-      </Routes>
+      <Route
+        index
+        element={<PostList posts={posts.posts} postsPerPage={postsPerPage} />}
+      />
+      <Route path=":postId" element={<PostDetailPage />} />
+    </Routes>
   );
 };
 
