@@ -9,7 +9,9 @@
         "id": 1,
         "author": "John Doe",
         "text": "Awesome tips!",
-        "replies": [{ "id": 1, "author": "Charlie Davis", "text": "Disagree.." }]
+        "replies": [
+          { "id": 1, "author": "Charlie Davis", "text": "Disagree.." }
+        ]
       },
       {
         "id": 2,
@@ -263,5 +265,93 @@
     ],
     "content": "Explore GraphQL, a modern API technology that provides a more efficient and flexible approach to fetching data. This guide covers the basics and advanced features of GraphQL.",
     "publishedAt": "2023-12-15T14:55:00Z"
+  },
+  {
+    "id": 13,
+    "title": "Exploring Modern JavaScript ES6+ Features",
+    "author": "Daniel Carter",
+    "likes": 180,
+    "comments": [
+      {
+        "id": 1,
+        "author": "Alice Brown",
+        "text": "This is a must-read for JavaScript developers!"
+      },
+      {
+        "id": 2,
+        "author": "Charlie Davis",
+        "text": "ES6 arrow functions are my favorite."
+      },
+      {
+        "id": 3,
+        "author": "Eva Green",
+        "text": "Can you provide more examples of destructuring?"
+      }
+    ],
+    "content": "Discover the powerful features introduced in modern JavaScript, including arrow functions, destructuring, and more. Supercharge your coding skills!",
+    "publishedAt": "2023-02-10T12:45:00Z"
+  },
+  {
+    "id": 14,
+    "title": "Optimizing Images for the Web: A Comprehensive Guide",
+    "author": "Ava Clark",
+    "likes": 250,
+    "comments": [
+      { "id": 1, "author": "Liam Turner", "text": "Crucial information!" },
+      {
+        "id": 2,
+        "author": "Mia Davis",
+        "text": "What tools do you recommend for image optimization?"
+      },
+      {
+        "id": 3,
+        "author": "Noah Miller",
+        "text": "Thanks for sharing your expertise."
+      }
+    ],
+    "content": "Improve your website performance by mastering image optimization. This guide covers techniques, tools, and best practices for delivering high-quality images with minimal impact on load times.",
+    "publishedAt": "2023-05-18T14:00:00Z"
+  },
+  {
+    "id": 15,
+    "title": "Animating Interfaces with CSS Transitions and Keyframes",
+    "author": "Caleb Foster",
+    "likes": 180,
+    "comments": [
+      { "id": 1, "author": "Nina Taylor", "text": "Amazing animations!" },
+      {
+        "id": 2,
+        "author": "Oliver White",
+        "text": "Can you demonstrate creating a simple loading spinner?"
+      },
+      {
+        "id": 3,
+        "author": "Penelope Turner",
+        "text": "Looking forward to your next animation tutorial."
+      }
+    ],
+    "content": "Dive into the world of CSS animations! This tutorial walks you through using transitions and keyframes to create smooth and engaging animations for your web interfaces.",
+    "publishedAt": "2023-06-30T18:50:00Z"
+  },
+  {
+    "id": 16,
+    "title": "Effective Error Handling in JavaScript Applications",
+    "author": "Olivia Wright",
+    "likes": 200,
+    "comments": [
+      { "id": 1, "author": "Quincy Miller", "text": "Critical information!" },
+      {
+        "id": 2,
+        "author": "Rachel Brown",
+        "text": "How can I handle errors in asynchronous code?"
+      },
+      {
+        "id": 3,
+        "author": "Samuel Davis",
+        "text": "Thanks for the clear explanations."
+      }
+    ],
+    "content": "Master the art of error handling in JavaScript applications. Learn techniques to catch and handle errors gracefully, ensuring a smoother user experience.",
+    "publishedAt": "2023-07-12T10:15:00Z"
   }
 ]

@@ -1,5 +1,6 @@
 import type { TBlogPost } from "../types/BlogPost";
 
+
 export function findPostById(
   posts: TBlogPost[],
   postId: number
@@ -21,4 +22,12 @@ export function formatDate(date: string): string | null {
   });
 
   return formattedDate;
+}
+
+export function getRandomImage(): string {
+  const randomNumber = Math.floor(Math.random() * 63) + 1;
+
+  const generatedPath = `url('/assets/bg-placeholders/bg (${randomNumber}).jpg')`;
+
+  return generatedPath;
 }

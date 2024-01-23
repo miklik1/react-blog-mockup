@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback } from "react";
 
-import StyledButton from "../../button/styled-button.component";
-
 import type { TComment } from "../../../types/BlogPost";
 import "./comment-form.styles.scss";
+import { Form } from "react-bootstrap";
+import { CustomButton } from "../../button/custom-button.component";
 
 interface CommentFormProps {
   postId: number;
@@ -108,41 +108,55 @@ const CommentForm: React.FC<CommentFormProps> = ({
       {/* Horní část formuláře */}
       <div className="upper-section">
         {/* Vstupní pole pro jméno autora */}
-        <input
+        <Form.Control
           type="text"
           name="authorName"
           value={formData.authorName}
           onChange={handleInputChange}
           placeholder="Your Name"
+          style={{ marginRight: "1em" }}
         />
 
         {/* Odesílací tlačítko */}
-        <StyledButton variant="secondary">Submit</StyledButton>
+        <CustomButton text="Submit" backgroundColor="main" textColor="white" />
       </div>
 
       {/* Informace o odpovědi */}
-      <p className="reply-info">
+      <div className="reply-info">
         {replyToComment && (
-          <p>
-            Replying to: <strong>{replyToComment?.author} </strong>
+          <div
+            style={{
+              display: "flex",
+              gap: "1em",
+              justifyContent: "space-between",
+              alignItems: "center",
+            }}
+          >
+            <p>
+              Replying to: <strong>{replyToComment?.author} </strong>
+            </p>
             {/* Tlačítko pro zrušení odpovědi */}
             {isReply && (
-              <StyledButton size="small" variant="danger" onClick={cancelReply}>
-                Cancel
-              </StyledButton>
+              <CustomButton
+                text="❌ Cancel"
+                size="medium"
+                textColor="black"
+                onClick={cancelReply}
+              />
             )}
-          </p>
+          </div>
         )}
-      </p>
+      </div>
 
       {/* Vstupní pole pro text komentáře */}
-      <textarea
+      <Form.Control
         name="newComment"
         value={formData.newComment}
         onChange={handleInputChange}
         placeholder="Add a new comment..."
         rows={4}
         cols={50}
+        as="textarea"
       />
 
       {/* Varování o nevyplněných polích formuláře */}

@@ -1,3 +1,27 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+
+$base-color: #D5BDAF;
+
+@font-face {
+  font-family: "HattonMedium";
+  src: local("HattonMedium"),
+    url("./assets/fonts/PPHatton-Medium.otf") format("opentype");
+  font-weight: medium;
+}
+
+@font-face {
+  font-family: "HattonBold";
+  src: local("HattonBold"),
+    url("./assets/fonts/PPHatton-Bold.otf") format("opentype");
+  font-weight: bold;
+}
+
+.nav-color {
+  background-color: $base-color;
+}
+
 /* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;

@@ -1,0 +1,16 @@
+.list-group-item:hover {
+  background: #edede9;
+  cursor: pointer;
+}
+
+.post-list-new {
+  .row > * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    margin: 0;
+    padding: 0;
+  }
+}

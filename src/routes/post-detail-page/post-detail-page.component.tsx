@@ -1,4 +1,4 @@
-import React, { useContext, useMemo } from "react";
+import React, { useContext, useMemo, useState } from "react";
 import { useParams } from "react-router-dom";
 
 import { MyContext } from "../../store/store";
@@ -37,6 +37,9 @@ const PostDetailPage: React.FC = () => {
     // Volání funkce pro aktualizaci komentářů v rámci stavového kontextu
     postsContext.updatePostComments(postId, newComments);
   };
+  const [showComments, setShowComments] = useState(false);
+  const handleShowComments = () => setShowComments(true);
+  const handleHideComments = () => setShowComments(false);
 
   // Kontrola existence příspěvku a stavového kontextu
   if (!post || !postsContext) {
@@ -45,11 +48,15 @@ const PostDetailPage: React.FC = () => {
 
   return (
     <>
-      {post && <BlogPostDisplay post={post} />}
+      {post && (
+        <BlogPostDisplay post={post} handleShowComments={handleShowComments} />
+      )}
       <Comments
         postId={postIdNumber}
         comments={post.comments}
         updateComments={updateComments}
+        showComments={showComments}
+        handleComments={handleHideComments}
       />
     </>
   );

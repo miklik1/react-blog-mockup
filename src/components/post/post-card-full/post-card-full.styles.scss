@@ -1,0 +1,14 @@
+.post-card-full {
+  .row > * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .row {
+    margin: 0;
+    padding: 0;
+  }
+}
+.post-card-full:hover {
+  transform: translateY(-3px);
+}

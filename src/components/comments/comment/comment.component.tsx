@@ -1,9 +1,8 @@
 import React from "react";
 
-import StyledButton from "../../button/styled-button.component";
-
 import type { TComment } from "../../../types/BlogPost";
 import "./comment.styles.scss";
+import { CustomButton } from "../../button/custom-button.component";
 
 export interface CommentProps {
   comment: TComment;
@@ -17,19 +16,24 @@ const Comment: React.FC<CommentProps> = ({ comment, onReply, replyable }) => {
   return (
     <>
       <div className="comment">
-        <div className="comment-header">
+        <div className="comment-header" style={{ marginBottom: "0.5em" }}>
           <strong>{author}</strong>
           {replyable && (
-            <StyledButton
-              variant="danger"
+            <CustomButton
+              text="Reply"
+              textColor="black"
               size="small"
+              backgroundColor="side"
               onClick={() => onReply(id)}
-            >
-              Reply
-            </StyledButton>
+            />
           )}
         </div>
-        <p>{text}</p>
+        <div
+          style={{ display: "flex", gap: "1em", justifyContent: "flex-start", alignItems: "center" }}
+        >
+          {!replyable && <div className="vr"></div>}
+          <p style={{ margin: "0"}}>{text}</p>
+        </div>
         {replies &&
           replies.map((reply) => (
             <Comment
