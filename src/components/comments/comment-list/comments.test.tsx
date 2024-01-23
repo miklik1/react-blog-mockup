@@ -10,6 +10,7 @@ describe("Comments Component", () => {
   ];
 
   const updateCommentsMock = jest.fn();
+  const handleCommentsMock = jest.fn();
 
   beforeEach(() => {
     render(
@@ -17,6 +18,8 @@ describe("Comments Component", () => {
         postId={postId}
         comments={comments}
         updateComments={updateCommentsMock}
+        showComments={false}
+        handleComments={handleCommentsMock}
       />
     );
   });
