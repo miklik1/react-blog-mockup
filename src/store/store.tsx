@@ -23,7 +23,7 @@ const MyContextProvider: React.FC<MyContextProviderProps> = ({ children }) => {
   // Načtení příspěvků ze stavu nebo z localStorage
   const [postsData, setPostsData] = useState<TBlogPost[]>(() => {
     const storedPosts = localStorage.getItem("posts");
-    return storedPosts?.length === 16 ? JSON.parse(storedPosts) : posts;
+    return storedPosts ? JSON.parse(storedPosts) : posts;
   });
 
   // Funkce pro kontrolu, zda uživatel již dal like konkrétnímu příspěvku
