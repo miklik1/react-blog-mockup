@@ -36,7 +36,7 @@ const Home = () => {
           style={{ marginTop: "1em" }}
           className="animated animatedFadeInRight fadeInRight"
         >
-          <img src="assets/home-background.svg" style={{ maxWidth: "100%" }} />
+          <img src="assets/home/home-background.svg" style={{ maxWidth: "100%" }} />
         </Col>
       </Row>
       <div className="ocean">
